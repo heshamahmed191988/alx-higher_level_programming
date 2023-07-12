@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-'''Module for number_of_lines method.'''
+'''Module for write_file method.'''
 
 
-def number_of_lines(filename=""):
-    '''Method for reading from file.'''
-    with open(filename, "r", encoding="utf-8") as f:
-        return len(f.readlines())
+def write_file(filename="", text=""):
+    '''Method for reading lines from file.'''
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
