@@ -1,3 +1,2 @@
--- First add
--- insert new row
-INSERT INTO first_table (id, name) VALUES (89, 'Holberton School');
+-- Creates a table with fields in the MySQL
+INSERT INTO `first_table` (`id`, `name`) VALUES ('89', 'Holberton School');
