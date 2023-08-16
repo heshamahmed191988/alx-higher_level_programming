@@ -1,7 +1,4 @@
--- My privileges
--- show privs for user1
-CREATE USER 'user_0d_1'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
--- show privs for user2
-CREATE USER 'user_0d_2'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
+-- lists all privileges of the MySQL users 1
+-- list all privileges of the MySQL user 2
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+SHOW GRANTS FOR 'user_0d_2'@'localhost';
