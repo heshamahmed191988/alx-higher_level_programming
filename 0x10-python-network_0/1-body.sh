@@ -1,4 +1,11 @@
 #!/bin/bash
-# Curls to the end, location!
-response=$(curl -Ls "$1")
-echo -e "Route 2\n$(whoami)@$(hostname):$(pwd)\$ $0 $1\n$response"
+
+url="$1"
+response=$(curl -s -w "%{http_code}" "$url")
+
+if [[ $response == 200 ]]; then
+  body=$(curl -s "$url")
+  echo "$body"
+else
+  echo "Error: Unexpected status code $response"
+fi
